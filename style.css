@@ -1,11 +1,28 @@
-/* Google Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+/* Google Font Link for a more stylish, "boss" font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Keyframes for the glowing animation */
+@keyframes glow-pulse {
+    0% {
+        box-shadow: 0 0 20px #00ff00, inset 0 0 15px rgba(0, 255, 0, 0.3);
+        text-shadow: 0 0 5px #00ff00;
+    }
+    50% {
+        box-shadow: 0 0 30px #00ff00, inset 0 0 20px rgba(0, 255, 0, 0.4);
+        text-shadow: 0 0 10px #00ff00;
+    }
+    100% {
+        box-shadow: 0 0 20px #00ff00, inset 0 0 15px rgba(0, 255, 0, 0.3);
+        text-shadow: 0 0 5px #00ff00;
+    }
+}
+
 
 /* General Body Styles */
 body {
     background-color: #050f05; /* Deep dark green background */
     color: #00ff00; /* Neon green text color */
-    font-family: 'Share Tech Mono', monospace; /* Tech-style font */
+    font-family: 'Orbitron', sans-serif; /* New stylish font */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +38,9 @@ body {
     padding: 25px;
     max-width: 400px;
     width: 100%;
-    box-shadow: 0 0 20px #00ff00, inset 0 0 15px rgba(0, 255, 0, 0.3); /* Glowing effect */
     text-align: center;
+    /* Added pulsing glow animation */
+    animation: glow-pulse 4s infinite ease-in-out;
 }
 
 /* Profile Picture Styles */
@@ -31,21 +49,25 @@ body {
     height: 120px;
     border-radius: 50%; /* Makes the image circular */
     border: 3px solid #00ff00; /* Neon green border for the image */
-    box-shadow: 0 0 15px #00ff00; /* Glowing effect for the image */
+    box-shadow: 0 0 20px #00ff00; /* Enhanced glowing effect for the image */
     margin-bottom: 15px;
 }
 
 /* Header Text Styles */
 .profile-header h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
+    font-weight: 700; /* Bolder text */
     margin: 10px 0 5px;
-    text-shadow: 0 0 5px #00ff00;
+    text-shadow: 0 0 8px #00ff00, 0 0 12px rgba(0, 255, 0, 0.7); /* Stronger text glow */
+    letter-spacing: 2px; /* Adds space between letters */
+    text-transform: uppercase;
 }
 
 .profile-header p {
     font-size: 0.9em;
     color: #9aff9a;
     margin-bottom: 25px;
+    letter-spacing: 1px;
 }
 
 /* Profile Details Section */
@@ -57,17 +79,18 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    background: rgba(0, 255, 0, 0.05); /* Slight background for items */
-    padding: 10px;
-    border-left: 3px solid #00ff00;
+    background: rgba(0, 255, 0, 0.05);
+    padding: 12px;
+    border-left: 4px solid #00ff00;
     border-radius: 5px;
 }
 
 .detail-item i {
-    font-size: 1.8em;
+    font-size: 2em; /* Slightly larger icons */
     margin-right: 15px;
     width: 40px;
     text-align: center;
+    text-shadow: 0 0 5px #00ff00;
 }
 
 .detail-item div {
@@ -77,13 +100,14 @@ body {
 
 .detail-item span {
     font-size: 0.8em;
-    color: #9aff9a; /* Lighter green for labels */
+    color: #9aff9a;
+    text-transform: uppercase; /* Makes labels uppercase */
 }
 
 .detail-item p {
-    font-size: 1.1em;
-    margin: 2px 0 0;
-    font-weight: bold;
+    font-size: 1.2em;
+    margin: 3px 0 0;
+    font-weight: 700; /* Bolder info text */
 }
 
 /* Footer and Buttons */
@@ -93,40 +117,43 @@ body {
 
 .btn {
     display: block;
-    padding: 12px;
+    padding: 14px; /* Larger buttons */
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 700; /* Bolder button text */
     margin-top: 10px;
     transition: all 0.3s ease;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn-verify {
     background-color: #00ff00;
     color: #000;
     border: 1px solid #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
 .btn-verify:hover {
     background-color: #000;
     color: #00ff00;
-    box-shadow: 0 0 10px #00ff00;
+    box-shadow: 0 0 20px #00ff00;
 }
 
 .certified-text {
     font-size: 0.9em;
-    margin: 5px 0 15px;
+    margin: 8px 0 15px;
+    color: #9aff9a;
 }
 
 .btn-student {
     background-color: transparent;
     color: #00ff00;
-    border: 1px solid #00ff00;
+    border: 2px solid #00ff00;
 }
 
 .btn-student:hover {
     background-color: #00ff00;
     color: #000;
-    box-shadow: 0 0 10px #00ff00;
+    box-shadow: 0 0 20px #00ff00;
 }
