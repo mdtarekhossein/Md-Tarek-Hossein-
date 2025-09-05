@@ -1,153 +1,168 @@
-/* Google Font Link for a more stylish, "boss" font */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
-/* Keyframes for the glowing animation */
-@keyframes glow-pulse {
-    0% {
-        box-shadow: 0 0 20px #00ff00, inset 0 0 15px rgba(0, 255, 0, 0.3);
-        text-shadow: 0 0 5px #00ff00;
-    }
-    50% {
-        box-shadow: 0 0 30px #00ff00, inset 0 0 20px rgba(0, 255, 0, 0.4);
-        text-shadow: 0 0 10px #00ff00;
-    }
-    100% {
-        box-shadow: 0 0 20px #00ff00, inset 0 0 15px rgba(0, 255, 0, 0.3);
-        text-shadow: 0 0 5px #00ff00;
-    }
-}
-
-
-/* General Body Styles */
+/* Main body styling */
 body {
-    background-color: #050f05; /* Deep dark green background */
-    color: #00ff00; /* Neon green text color */
-    font-family: 'Orbitron', sans-serif; /* New stylish font */
+    background-color: #0d0d0d; /* Dark black background */
+    color: #e0e0e0; /* Light grey text color */
+    font-family: 'Roboto', sans-serif; /* Clean font for readability */
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    padding: 30px 15px;
+    line-height: 1.6;
 }
 
-/* Profile Card Container */
-.profile-card {
-    background-color: #0a1a0a; /* Darker green for the card */
-    border: 2px solid #00ff00; /* Neon green border */
+/* Main container for the bio */
+.bio-container {
+    background: #1a1a1a; /* Slightly lighter dark background */
+    border: 2px solid #00ffde; /* Neon cyan border */
     border-radius: 15px;
-    padding: 25px;
-    max-width: 400px;
+    box-shadow: 0 0 25px rgba(0, 255, 222, 0.4); /* Neon glow effect */
+    max-width: 600px;
     width: 100%;
+    padding: 25px;
+}
+
+/* Header style */
+.bio-header {
     text-align: center;
-    /* Added pulsing glow animation */
-    animation: glow-pulse 4s infinite ease-in-out;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #00ffde;
+    padding-bottom: 20px;
 }
 
-/* Profile Picture Styles */
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Makes the image circular */
-    border: 3px solid #00ff00; /* Neon green border for the image */
-    box-shadow: 0 0 20px #00ff00; /* Enhanced glowing effect for the image */
+.bio-header h1 {
+    font-family: 'Orbitron', sans-serif; /* Tech font for heading */
+    color: #00ffde;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(0, 255, 222, 0.7);
+}
+
+/* General section styling */
+.info-section {
+    background-color: #262626;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    color: #00ffde;
+    margin-top: 0;
     margin-bottom: 15px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
 }
 
-/* Header Text Styles */
-.profile-header h2 {
-    font-size: 1.6em;
-    font-weight: 700; /* Bolder text */
-    margin: 10px 0 5px;
-    text-shadow: 0 0 8px #00ff00, 0 0 12px rgba(0, 255, 0, 0.7); /* Stronger text glow */
-    letter-spacing: 2px; /* Adds space between letters */
-    text-transform: uppercase;
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #444;
+}
+.info-item:last-child {
+    border-bottom: none;
+}
+.info-item span {
+    color: #a0a0a0; /* Grey color for labels */
+    font-weight: bold;
+}
+.info-item p {
+    margin: 0;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: right;
 }
 
-.profile-header p {
-    font-size: 0.9em;
-    color: #9aff9a;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
+/* Team Section Style */
+.team-section {
+    background: linear-gradient(145deg, #2a003a, #002a3a);
+    border: 1px solid #ff00e6;
+    box-shadow: 0 0 15px rgba(255, 0, 230, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
-
-/* Profile Details Section */
-.profile-details {
-    text-align: left;
-}
-
-.detail-item {
+.team-title {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    background: rgba(0, 255, 0, 0.05);
-    padding: 12px;
-    border-left: 4px solid #00ff00;
-    border-radius: 5px;
+    justify-content: center;
+    gap: 15px;
+    color: #ff00e6;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+    font-weight: 700;
 }
-
-.detail-item i {
-    font-size: 2em; /* Slightly larger icons */
-    margin-right: 15px;
-    width: 40px;
-    text-align: center;
-    text-shadow: 0 0 5px #00ff00;
-}
-
-.detail-item div {
+.title-text {
     display: flex;
     flex-direction: column;
 }
-
-.detail-item span {
-    font-size: 0.8em;
-    color: #9aff9a;
-    text-transform: uppercase; /* Makes labels uppercase */
+.title-text span {
+    font-size: 0.7em;
+    color: #e0e0e0;
+}
+.team-details {
+    margin-top: 15px;
+    color: #f0f0f0;
+}
+.team-details p {
+    margin: 5px 0;
 }
 
-.detail-item p {
-    font-size: 1.2em;
-    margin: 3px 0 0;
-    font-weight: 700; /* Bolder info text */
+/* Links Section styling */
+.links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+    margin-bottom: 20px;
 }
-
-/* Footer and Buttons */
-.profile-footer {
-    margin-top: 20px;
-}
-
-.btn {
-    display: block;
-    padding: 14px; /* Larger buttons */
+.link-btn {
+    background: linear-gradient(45deg, #00ffde, #00a2ff);
+    color: #0d0d0d;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 700; /* Bolder button text */
-    margin-top: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1em;
     transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 195, 255, 0.4);
+}
+.link-btn:hover {
+    transform: translateY(-3px); /* Button moves up on hover */
+    box-shadow: 0 6px 20px rgba(0, 195, 255, 0.6);
+}
+.link-btn i {
+    margin-right: 10px;
 }
 
-.btn-verify {
-    background-color: #00ff00;
-    color: #000;
-    border: 1px solid #00ff00;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+/* Services and Disclaimer sections */
+.services-text, .disclaimer-section {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #262626;
+}
+.disclaimer-section h3 {
+    color: #ffcc00; /* Yellow for warning */
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-.btn-verify:hover {
-    background-color: #000;
-    color: #00ff00;
-    box-shadow: 0 0 20px #00ff00;
-}
-
-.certified-text {
-    font-size: 0.9em;
-    margin: 8px 0 15px;
-    color: #9aff9a;
-}
-
-.btn-student {
-    background-color: transparent;
+/* Footer style */
+.bio-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #00ffde;
+    color: #00ffde;
+}    background-color: transparent;
     color: #00ff00;
     border: 2px solid #00ff00;
 }
